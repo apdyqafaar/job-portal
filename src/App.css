@@ -1,0 +1,16 @@
+.grid-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     /* background-color: #0d1117; Deep dark background */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; /* Size of grid squares */
+  color: #c9d1d9; /* Light text for contrast */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
