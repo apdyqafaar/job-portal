@@ -10,6 +10,7 @@ import { SavedJob } from "./pages/Saved-job"
 import { MyJobs } from "./pages/My-jobs"
 import { ThemeProvider } from "./components/ThemProvider"
 import './App.css';
+import { JobPage } from "./pages/JobPage"
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         },
         {
           path:'/job/:id',
-          element:<Job/> 
+          element:<JobPage/> 
         },
         {
           path:'/post-job',
