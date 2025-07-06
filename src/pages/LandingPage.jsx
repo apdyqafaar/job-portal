@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import companies from '../Data/companies.json'
+import faq from '../Data/faq.json'
 
 // import {
 //   Carousel,
@@ -19,7 +20,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+
+
 import Autoplay from "embla-carousel-autoplay"
+import { Card, CardAction, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@radix-ui/react-accordion'
 
 
 
@@ -31,7 +36,7 @@ export const LandingPage = () => {
 
 
   return (
-    <div className='flex flex-col gap-10 sm:gap-20 py-10 sm:py-20'>
+    <div className='flex flex-col gap-10 sm:gap-20 py-10 sm:py-20 w-full'>
          <section className='text-center my-10'>
           <h1 className=' flex flex-col justify-center items-center text-4xl  sm:text-6xl lg:text-8xl font-extrabold gradient-title tracking-tighter '>Find Your dream Jop {" "}
             <span className='flex items-center justify-center'>
@@ -81,6 +86,55 @@ export const LandingPage = () => {
     </Carousel>
 </section>
 
+
+{/* bunner */}
+<section>
+  <img src='/bunner.jpg' className="w-full rounded-md " />
+</section>
+
+
+{/* cards */}
+<section className='w-full grid grid-cols-1 sm:grid-cols-2 gap-4 '>
+  <Card>
+  <CardHeader>
+    <CardTitle>For Job Seekers</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p>Search and apply for jobs, Track applications, and more </p>
+  </CardContent>
+
+</Card>
+
+<Card>
+  <CardHeader>
+    <CardTitle>For Employers</CardTitle>
+   
+  </CardHeader>
+  <CardContent>
+    <p>Post jobs, Manage applications, and find the best candidate</p>
+  </CardContent>
+
+</Card>
+</section>
+
+
+     <Accordion
+      type="single"
+      collapsible
+      className="w-full"
+      defaultValue="item-1"
+    >
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Product Information</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            Our flagship product combines cutting-edge technology with sleek
+            design. Built with premium materials, it offers unparalleled
+            performance and reliability.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
          
     </div>
   )
